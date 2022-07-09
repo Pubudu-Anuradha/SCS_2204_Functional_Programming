@@ -1,2 +1,6 @@
 *.class
 *.log
+*.tasty
+.scalafmt.conf
+.metals/*
+.vscode/*
