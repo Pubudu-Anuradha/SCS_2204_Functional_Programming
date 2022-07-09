@@ -1,0 +1,2 @@
+# SCS_2204_Functional_Programming
+Functional Programming tutorials and assignments
