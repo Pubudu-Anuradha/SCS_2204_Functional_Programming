@@ -4,8 +4,8 @@ object question1 extends App {
     deposit match {
       case x if x <= 20000.0   => deposit * .02;
       case x if x <= 200000.0  => deposit * .04;
-      case x if x <= 2000000.0 => deposit * .35;
-      case _                   => deposit * .65;
+      case x if x <= 2000000.0 => deposit * .035;
+      case _                   => deposit * .065;
     }
   }
 

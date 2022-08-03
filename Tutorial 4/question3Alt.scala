@@ -16,11 +16,11 @@ object question3Alt extends App {
 
   def capitalizeIndex(s: String, index: Int): String = {
     var chars: Array[Char] = s.toCharArray()
-    for (i <- 0 to chars.length - 1) {
-      chars(i) =
-        if (chars(i) >= 'a' && chars(i) <= 'z' && i == index) chars(i).toUpper
-        else chars(i)
-    }
+
+    chars(index) =
+      if (chars(index) >= 'a' && chars(index) <= 'z') chars(index).toUpper
+      else chars(index);
+
     String(chars)
   }
 
