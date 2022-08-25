@@ -25,15 +25,13 @@ object question1_2 extends App {
     case _               => printf("%d is Not a prime\n", x);
   }
 
-  def primeSeq(n: Int): Any = {
-    if (n > 0) {
+  def primeSeq(n: Int): Any = n match {
+    case x if (x > 0 && prime(x)) => {
       primeSeq(n - 1);
-      if (prime(n)) {
-        printf("%d ", n);
-      }
-    } else {
-      printf("\n");
+      printf("%d ", n);
     }
+    case x if (x > 0) => primeSeq(n - 1);
+    case _            => return;
   }
 
   // For Demonstration of question 2
@@ -41,5 +39,6 @@ object question1_2 extends App {
   var n = scala.io.StdIn.readInt();
   printf("Series of the prime numbers until %d : ", n);
   primeSeq(n);
+  printf("\n");
 
 }
