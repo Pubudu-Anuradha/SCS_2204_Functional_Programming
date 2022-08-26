@@ -1,9 +1,8 @@
 object question5 extends App {
 
-  def sumOfEvens(n: Int): Int = n match {
-    case x if (x <= 0)     => 0;
-    case x if (x % 2 == 0) => n + sumOfEvens(n - 2);
-    case _                 => sumOfEvens(n - 1);
+  def sumOfEvens(n: Int, i: Int = 2): Int = i match {
+    case x if (x >= n) => 0;
+    case _             => i + sumOfEvens(n, i + 2);
   }
 
   // For demonstration
