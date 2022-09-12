@@ -43,6 +43,14 @@ case class Rational(num: Int, den: Int) {
     ).simplify
   }
 
+  // Without operator overloading
+  // def sub(that: Rational) = {
+  //   new Rational(
+  //     this.denom * that.numer - that.denom * this.numer,
+  //     this.denom * that.denom
+  //   ).simplify
+  // }
+
   def simplify: Rational = {
     var a = numer.abs;
     var b = denom.abs;
@@ -85,6 +93,8 @@ object rationals extends App {
   println(s"y = $y");
   println(s"z = $z");
   println(s"x - y - z = $x - $y - $z = ${x - y - z}")
+  // Without operator overloading
+  // println(s"x - y - z = $x - $y - $z = ${x.sub(y).sub(z)}")
 
   println("========================");
 }
